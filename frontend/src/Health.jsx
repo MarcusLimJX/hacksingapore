@@ -3,8 +3,12 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // Import the dayGridPlugin
 
 export default function Calendar() {
 	const events = [
-		{ title: "Marcus's Funeral", start: "2024-05-27", end: "2024-05-27" },
-		{ title: "Marcus's Funeral", start: "2024-05-28", end: "2024-05-28" },
+		{ title: "Dialysis Treatment", start: "2024-05-27", end: "2024-05-27" },
+		{
+			title: "Kidney Surgery",
+			start: "2024-05-28",
+			end: "2024-05-28",
+		},
 		// Add more events as needed
 	];
 
