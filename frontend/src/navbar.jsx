@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const NavBar = () => {
 	return (
-		<div className="h-screen bg-neutral-100">
+		<div className="">
 			<Nav />
 		</div>
 	);
@@ -175,7 +175,7 @@ const FooterCTAs = () => {
 const LINKS = [
 	{
 		title: "home",
-		href: "/",
+		href: "/home",
 	},
 	{
 		title: "finance",
