@@ -43,23 +43,32 @@ export default function Finance() {
     const numRows = Math.max(...tableHeaders.map(header => tableData[header].length));
 
     return (
-        <table className="table-auto">
-            <thead>
-                <tr>
-                    {tableHeaders.map((header, index) => (
-                        <th key={index}>{header}</th>
-                    ))}
-                </tr>
-            </thead>
-            <tbody>
-                {Array.from({ length: numRows }).map((_, rowIndex) => (
-                    <tr key={rowIndex}>
-                        {tableHeaders.map((header, columnIndex) => (
-                            <td key={columnIndex}>{selectorToText[tableData[header][rowIndex]]}</td>
+        <>
+            <h1 className="text-2xl font-bold text-blue-500">Discounts For You</h1>
+            {Object.keys(tableData).length === 0 ? (
+                <div className="flex justify-center">
+                    <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b952fys6frty3nml3q32gthdzyr5ly0dgvyrcnfirvxx&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Loading..." />
+                </div>
+            ) : (
+                <table className="table-auto">
+                    <thead>
+                        <tr>
+                            {tableHeaders.map((header, index) => (
+                                <th key={index}>{header}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {Array.from({ length: numRows }).map((_, rowIndex) => (
+                            <tr key={rowIndex}>
+                                {tableHeaders.map((header, columnIndex) => (
+                                    <td key={columnIndex}>{selectorToText[tableData[header][rowIndex]]}</td>
+                                ))}
+                            </tr>
                         ))}
-                    </tr>
-                ))}
-            </tbody>
-        </table>
+                    </tbody>
+                </table>
+            )}
+        </>
     );
 }

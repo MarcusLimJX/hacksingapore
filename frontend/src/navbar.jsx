@@ -175,7 +175,7 @@ const FooterCTAs = () => {
 const LINKS = [
 	{
 		title: "home",
-		href: "/home",
+		href: "/",
 	},
 	{
 		title: "finance",
@@ -188,6 +188,10 @@ const LINKS = [
 	{
 		title: "login",
 		href: "/login",
+	},
+	{
+		title: "DBS Planner",
+		href: "/dbs-planner",
 	},
 ];
 
