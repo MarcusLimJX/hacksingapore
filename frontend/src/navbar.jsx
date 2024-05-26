@@ -189,10 +189,6 @@ const LINKS = [
 		title: "login",
 		href: "/login",
 	},
-	{
-		title: "DBS Planner",
-		href: "/dbs-planner",
-	},
 ];
 
 const SOCIAL_CTAS = [
